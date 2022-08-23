@@ -13,7 +13,7 @@ var SpeechRecognition = window.webkitSpeechRecognition;
 var recognition = new SpeechRecognition();
 
 function preload(){
-  apple = loadImage()
+  apple = loadImage("apple.png")
    }
 
 function start()
@@ -33,7 +33,7 @@ recognition.onresult = function(event) {
   to_number = Number(content);
     if (Number.isInteger(to_number)) {
       document.getElementById("status").innerHTML = "Started drawing apple"
-   apple= "set"
+   draw_apple= "set"
     } else {
       document.getElementById("status").innerHTML = "The speech has not recognized a number"
 
